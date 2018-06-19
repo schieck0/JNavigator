@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="607.0" prefWidth="879.0" stylesheets="@default.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.BrowserController">
+   <children>
+      <TabPane fx:id="tabPane" layoutY="57.0" prefHeight="364.0" prefWidth="600.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />
+      <BorderPane prefHeight="50.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="TOP_LEFT">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="22.0" minWidth="22.0" prefWidth="22.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="472.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="bBack" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="20.0" prefWidth="20.0" style="-fx-graphic: url(&quot;/view/img/Arrows-Left-Arrow-icon.png&quot;);" />
+                  <TextField fx:id="tfURL" onAction="#goURL" onKeyPressed="#tfUrlKey" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" />
+                  <Button fx:id="bForw" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goForward" prefHeight="20.0" prefWidth="20.0" style="-fx-graphic: url(&quot;/view/img/Arrows-Right-Arrow-icon.png&quot;);" GridPane.columnIndex="1" />
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goHome" prefHeight="20.0" prefWidth="20.0" style="-fx-graphic: url(&quot;/view/img/home-icon.png&quot;);" GridPane.columnIndex="3" />
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#refresh" prefHeight="20.0" prefWidth="20.0" style="-fx-graphic: url(&quot;/view/img/refresh-icon.png&quot;);" GridPane.columnIndex="2" />
+                  <MenuButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="30.0" style="-fx-graphic: url(&quot;/view/img/Menu-icon.png&quot;);" GridPane.columnIndex="5">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#openHist" text="Histórico" />
+                        <MenuItem mnemonicParsing="false" onAction="#openDowns" text="Downloads" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
